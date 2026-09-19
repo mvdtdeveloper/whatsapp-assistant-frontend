@@ -46,34 +46,42 @@ button {
   top: 0;
   height: 100vh;
 }
+
 .brand {
   display: flex;
-  gap: 12px;
   align-items: center;
-  padding: 0 10px 30px;
-  font-size: 19px;
+  gap: 10px;
 }
-.brand small,
-.sidebar small {
-  display: block;
-  color: #a9bdcf;
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand strong {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand small {
   font-size: 12px;
-  margin-top: 3px;
+  opacity: 0.7;
 }
-.brand-mark,
-.avatar {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #19a974;
-  color: white;
-  font-weight: 800;
-}
-
-
-
 
 
 .sidebar nav {
