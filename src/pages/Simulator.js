@@ -27,7 +27,7 @@ function Reply({ reply, onChoice }) {
 }
 
 export default function Simulator() {
-  const [phone, setPhone] = useState("919876543210");
+  const [phone, setPhone] = useState("919039845711");
   const [input, setInput] = useState("hii");
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -93,7 +93,7 @@ export default function Simulator() {
       <div className="phone-shell">
         <header>
           {/* <span className="avatar">M</span> */}
-            <img src={MvdtLogo} alt="" className="avatar"/>
+          <img src={MvdtLogo} alt="" className="avatar" />
           <div>
             <strong>MVDT Field Assistant</strong>
             <small>Business account</small>
