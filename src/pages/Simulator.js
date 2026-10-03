@@ -76,14 +76,11 @@ export default function Simulator() {
   }
 
   return (
-    <section>
-      <div className="page-heading">
+    <section className="chat-page">
+      <div className="simulator-tools">
         <div>
-          <h1>WhatsApp Flow Simulator</h1>
-          <p>
-            Uses the real backend conversation engine without sending Meta
-            messages.
-          </p>
+          <h1>Field Assistant Chat</h1>
+          <p>Uses your existing backend conversation engine.</p>
         </div>
         <label className="phone-field">
           Test phone
@@ -96,7 +93,7 @@ export default function Simulator() {
           <img src={MvdtLogo} alt="" className="avatar" />
           <div>
             <strong>MVDT Field Assistant</strong>
-            <small>Business account</small>
+            <small>online · business account</small>
           </div>
         </header>
         <main className="chat-body">

@@ -1,38 +1,41 @@
 import MvdtLogo from "../assets/mvdt_logo.png";
 
 const tabs = [
-  ["simulator", "WhatsApp Simulator"],
-  ["users", "Users"],
-  ["jobs", "Jobs"],
-  ["materials", "Materials"],
-  ["reports", "Reports"],
+  ["simulator", "💬", "Chat"],
+  ["users", "👥", "Users"],
+  ["reports", "📋", "Records"],
+  ["more", "☰", "More"],
 ];
 
 export default function Nav({ active, onChange }) {
-  return (
-    <aside className="sidebar">
-      <div className="brand">
-        <span className="brand-mark">
-          <img src={MvdtLogo} alt="" className="brand-logo" />
-        </span>
+  const mainActive = ["jobs", "materials"].includes(active) ? "more" : active;
 
-        <div>
-          <strong>MVDT</strong>
-          <small>Field Assistant</small>
+  return (
+    <>
+      <header className="app-topbar">
+        <div className="app-brand">
+          <img src={MvdtLogo} alt="MVDT" className="topbar-logo" />
+          <div>
+            <strong>MVDT Field Assistant</strong>
+            <small>Mobile Console</small>
+          </div>
         </div>
-      </div>
-      <nav>
-        {tabs.map(([id, label]) => (
+        <span className="online-dot" title="Connected" />
+      </header>
+
+      <nav className="bottom-nav" aria-label="Main navigation">
+        {tabs.map(([id, icon, label]) => (
           <button
-            className={active === id ? "active" : ""}
+            type="button"
+            className={mainActive === id ? "active" : ""}
             key={id}
             onClick={() => onChange(id)}
           >
-            {label}
+            <span className="bottom-nav-icon" aria-hidden="true">{icon}</span>
+            <span>{label}</span>
           </button>
         ))}
       </nav>
-      <p className="sidebar-note">Plan. Build. Connect. Deliver.</p>
-    </aside>
+    </>
   );
 }

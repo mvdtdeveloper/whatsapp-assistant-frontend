@@ -1,0 +1,8 @@
+{
+  "appId": "com.mvdt.fieldassistant",
+  "appName": "MVDT Field Assistant",
+  "webDir": "build",
+  "server": {
+    "androidScheme": "https"
+  }
+}
